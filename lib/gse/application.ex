@@ -9,11 +9,12 @@ defmodule Gse.Application do
     # List all child processes to be supervised
     children = [
       # Start the Ecto repository
-      Gse.Repo,
+      # Gse.Repo,
       # Start the endpoint when the application starts
-      GseWeb.Endpoint
+      GseWeb.Endpoint,
       # Starts a worker by calling: Gse.Worker.start_link(arg)
       # {Gse.Worker, arg},
+      {Gse.Repo, []},
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html

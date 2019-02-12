@@ -7,6 +7,12 @@
 # General application configuration
 use Mix.Config
 
+config :gse, Gse.Repo,
+  database: "gse_repo",
+  username: "user",
+  password: "pass",
+  hostname: "localhost"
+
 config :gse,
   ecto_repos: [Gse.Repo]
 
